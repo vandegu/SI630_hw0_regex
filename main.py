@@ -8,7 +8,7 @@ din = pd.read_table('webpages.csv',delimiter=',')
 din = np.array(din)
 
 # The RegEx used in our search.
-statement = '([a-zA-Z0-9]+)\s*(/at/|@|\[at\]|at)\s*([a-zA-Z0-9]+)\s*(/dot/|\[dot\]|\.|dot)\s*([a-zA-Z0-9]+)'
+statement = '([a-zA-Z0-9]+)\s*(/at/|@|\[at\]|at)\s*([a-zA-Z0-9]+)\s*(/dot/|\[dot\]|\.|dot)\s*([a-zA-Z0-9\.]+)'
 
 # Iterate over the input data and search for email addresses. If found, add to the array.
 for i,line in enumerate(din[:]):
